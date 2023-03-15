@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Two-Letter Korean Word Generator</title>
+  </head>
+  <body>
+    
+    <h1>Two-Letter Korean Word Generator</h1>
+    <button id="generate-btn">Generate</button>
+    <p id="output"></p>
+    <a href="1.html"><p>HTML Basic</p></a>
+    <a href="2.html"><p>Morse Code Translator</p></a>
+    <a href="3.html">   <p>Two-Letter Korean Word Generator</p></a>
+    <script>
+      const generateButton = document.getElementById("generate-btn");
+      const output = document.getElementById("output");
+        
+      function generate() {
+        const firstLetter = String.fromCharCode(Math.floor(Math.random() * 11172) + 0xAC00);
+        const secondLetter = String.fromCharCode(Math.floor(Math.random() * 11172) + 0xAC00);
+        output.textContent = `${firstLetter}${secondLetter}`;
+      }
+
+      generateButton.addEventListener("click", generate);
+    </script>
+  </body>
+</html>
